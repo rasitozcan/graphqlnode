@@ -1,0 +1,31 @@
+{
+  "name": "hackernews-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.16.2",
+    "husky": "^1.0.0-rc.15",
+    "jsonwebtoken": "^8.3.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "prisma-binding": "^2.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ],
+    "yarn.lock": [
+      "git rm --cached"
+    ]
+  }
+}
