@@ -5,6 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon src/index.js",
+    "dev": "npm-run-all --parallel start playground",
+    "playground": "graphql playground",
+    "prisma": "prisma",
+    "graphql": "graphql",
     "precommit": "lint-staged"
   },
   "dependencies": {
@@ -17,7 +21,10 @@
     "prisma-binding": "^2.1.6"
   },
   "devDependencies": {
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "graphql-cli": "^2.16.4",
+    "npm-run-all": "^4.1.2",
+    "prisma": "^1.9.0"
   },
   "lint-staged": {
     "*.js": [
